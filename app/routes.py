@@ -29,4 +29,4 @@ def DOS():
     return redirect('http://www.dgisolfi.xyz:48000/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=app_port, debug=True)
+    app.run(host='0.0.0.0', port=app_port, debug=False)
