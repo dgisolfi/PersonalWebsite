@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta name="author"             content="Daniel Nicolas Gisolfi" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico"/>
+        <title>Daniel Gisolfi</title>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{{ url_for('static', filename='vendors/jquery.min.js') }}"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="{{ url_for('static', filename='vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/lux/bootstrap.min.css" >
+        
+        <!-- media icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- devicons -->
+        <!-- <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"> -->
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="/">Daniel Gisolfi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarScalable" aria-controls="NavbarScalable" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="NavbarScalable">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#about">About<span class="sr-only">(current)</a> -->
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" >
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('static', filename='assets/docs/Resume.pdf')}}">Resume</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/dgisolfi">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/dgisolfi/">linkedin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container" style="padding-top:10rem;" id="about">
+                    <div class="container-fluid">
+                        <div class="jumbotron">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <img class="rounded-circle center-block" src="{{ url_for('static', filename='assets/imgs/profile.JPG')}}" style="height: 200px;">
+                                </div>
+                                <div class="col-md-8">
+                                    <h1>Daniel<span class="text-info"> Gisolfi</span></h1>
+                                    <p style="padding: 10px; padding-bottom: 4px;">
+                                        Welcome to my website! I am a researcher for the IBM / Marist Joint Study and I am
+                                        an avid developer during my free time. With my spare time I develop bots, websites, and other fun programming
+                                        projects in order to expand my skill set. I am currently in my third year
+                                        at Marist College as a Computer Science major. At the IBM / Marist Joint
+                                        Study, I am researching blockchain as well as high and low level interaction honeypot technologies.
+                                        As a result of programing both blockchain and honeypot applications, I have acquired
+                                        a large range of skills with current and upcoming technologies. All personal projects can be
+                                        found and forked from <a href="https://github.com/dgisolfi">GitHub</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="jumbotron">
+                            <h1 class="display-5">Recent Projects</h1>
+                            <hr class="my-4">
+                            <h1 class="display-6">DOS</h1>
+                            <p style="font-size: 1.25rem">A Typescript OS created for Fall 2018 Operating Systems class. The latest release of DOS can be found running <a class="text-info" href="/DOS">here.</a></p>
+                            <hr class="my-4">
+                            <h1 class="display-6">IEEE Published Paper</h1>
+                            <p style="font-size: 1.25rem"><a class="text-info" href="{{ url_for('static', filename='assets/docs/HoneyNet.pdf')}}">HoneyNet Environment for Analyzing Malicious Actors</a> - A paper discussing research on Honeypots and a </p>
+                            <hr class="my-4">
+
+                            <hr class="my-4">
+                        </div>
+                    </div>
+                </div>
+                
+
+                    
+
+            </div> 
+
+        </div>
+        
+    </body>
+    <p class="footerText" style="clear:both;
+                            color: black; 
+                            font-family: Arial, 
+                            Helvetica, sans-serif;
+                            font-size: 14pt;
+                            text-align: center;">
+        <br>
+        Copyright &copy; 2018 Daniel Gisolfi
+        <br>
+        <a class="text-info" href="https://github.com/dgisolfi/PersonalWebsite">GitHub</a>
+        | Made by <a class="text-info" href="http://www.dgisolfi.xyz">Daniel Gisolfi</a>.
+        Code released under the <a class="text-info" href="https://github.com/dgisolfi/PersonalWebsite/blob/master/LICENSE">MIT License</a>.
+    </p>
+</html>
