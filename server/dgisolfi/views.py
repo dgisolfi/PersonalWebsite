@@ -47,22 +47,30 @@ class Projects(TemplateView):
         repositories = []
         try:
             response = requests.get(f'{self.GIT_API_URL}{url}', auth=(self.USER, self.API_TOKEN))
-            # print(json.dumps(response.json(), indent=4))
             for index, repo in enumerate(response.json()):
+                if repo['homepage'] != None:
+                    homepage = None
+                else:
+                    homepage = repo['homepage']
                 if repo['name'] in exceptions:
                     pass
                 elif 'cmpt' in repo['name'].lower():
                     pass
                 else:
-                    repositories.append({
+                    args = {
                         'name': repo['name'],
                         'description': repo['description'],
                         'name': repo['name'],
                         'url': repo['html_url'],
-                        'homepage': repo['homepage'],
                         'language': repo['language'],
                         'stars': repo['stargazers_count'],
-                    })
+                    }
+
+                    if repo['homepage'] != "":
+                        args['homepage'] = repo['homepage']
+
+                    repositories.append(args)
+
         except:
             print('Failed to get api request from %s' % url)
             

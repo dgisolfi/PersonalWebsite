@@ -20,7 +20,7 @@
                             <p class="card-text">{{ repo.description }} <a class="redirect" href="{{ repo.url }}">GitHub</a>.</p>
                         </div>
                     <div class="card-footer card-foot">
-                        {% if  repo.homepage is not defined %}
+                        {% if  repo.homepage != None %}
                         <a class="redirect" href="{{ repo.homepage }}">Project Link</a>
                         {% endif %}  
                         <p class="float-right">{{ repo.language }}</p>

@@ -33,7 +33,7 @@ dev_container:docker_image
 	@echo "\n Creating Docker container"
 	@#docker pull ${DOCKER_IMAGE}
 	# @docker run --rm --name $(container) -p 80:80 -v$(PWD)/DEV:/DEV $(image)
-	@docker run --rm --name dgisolfi_prod -p 80:80  -v$(PWD)/server:/server dgisolfi-site
+	@docker run --rm --name dgisolfi_prod -p 80:80  -v$(PWD)/server:/DEV dgisolfi-site
 	# docker run --rm --name dgisolfi_prod -p80:80 dgisolfi/dgisolfi-site
 
 publish_image: docker_image
