@@ -1,16 +1,20 @@
-FROM ubuntu:latest
+FROM python:3.6
 MAINTAINER Daniel Gisolfi
 EXPOSE 80
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y
 RUN apt-get install -y \
-    python3-pip \
-    python3-dev \
-    build-essential
+    build-essential \
+    && pip install --upgrade pip
 
-WORKDIR /Site
-COPY ./app .
+COPY ./server /server
+WORKDIR /server
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python3"]
-CMD ["routes.py"]
+
+ENV SECRET_KEY=AAAAA
+ENV USER=username
+ENV API_TOKEN=token
+
+ENTRYPOINT [ "python3" ]
+CMD ["./manage.py", "runserver", "--insecure", "0.0.0.0:80"]

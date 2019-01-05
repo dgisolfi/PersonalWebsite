@@ -1,5 +1,5 @@
 # PersonalWebsite
-A Personal Webpage run with Flask 
+A Personal Webpage run with Django 
 
 ### Author
 
@@ -21,7 +21,9 @@ docker run --rm --name dgisolfi_prod -p 80:80 dgisolfi/dgisolfi-site
 ```
 **commands**
 ```bash
+# Build the image based of the dockerfile
 docker build -t dgisolfi-site .
+# run the image
 docker run --rm --name dgisolfi_prod -p 80:80 dgisolfi-site
 ```
 If necessary the port that the container is pointing to can be changed, to do so change the first "80" to the port desired to be used outside of the container.

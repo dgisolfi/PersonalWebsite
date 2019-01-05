@@ -3,7 +3,6 @@
 
 container=dgisolfi_prod
 image=dgisolfi-site
-APPNAME=dgisolfi-site
 
 #####################
 # Common Commands
@@ -16,24 +15,11 @@ clean:
 	-docker kill $(container)
 	-docker rm $(container)
 	-docker rmi $(image)
-
-
-clean_images:
-	@#clean images TODO: These commands need Makefile compatibility
-	@docker rmi $(docker images | awk '{print $1}')
-	@docker images
-
-clean_containers:
-	@#clean Containers TODO: These commands need Makefile compatibility
-	@docker kill $(docker ps -a | awk '{print $1}')
-	@docker rm $(docker ps -a | awk '{print $1}')
-	@docker ps -a
-
+	-docker rmi dgisolfi/$(image)
 
 #####################
 # Docker Commands
 #####################
-
 
 docker_image:
 	@# Initial commands used priming devops environment
@@ -46,11 +32,11 @@ dev_container:docker_image
 	@# This command should be run from the local computer
 	@echo "\n Creating Docker container"
 	@#docker pull ${DOCKER_IMAGE}
-	@docker run --rm --name $(container) -p 80:80 $(image)
-	docker run --rm --name dgisolfi_prod -p 80:80 dgisolfi/dgisolfi-site
-	# -v /etc/letsencrypt/:/etc/letsencrypt/
+	# @docker run --rm --name $(container) -p 80:80 -v$(PWD)/DEV:/DEV $(image)
+	@docker run --rm --name dgisolfi_prod -p 80:80  -v$(PWD)/server:/server dgisolfi-site
+	# docker run --rm --name dgisolfi_prod -p80:80 dgisolfi/dgisolfi-site
+
 publish_image: docker_image
 	@echo "\n				Create dgisolfi-site docker image..."
-	@docker login
 	@docker tag ${image} dgisolfi/${image}:latest
 	@docker push dgisolfi/${image}

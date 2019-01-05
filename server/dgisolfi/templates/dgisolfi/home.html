@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock title %}
+
+{% comment %} loads all static files {% endcomment %}
+{% load static %}
+
+{% block body %}
+    <div class="row">
+        <div class="container" style="padding-top:10rem;">
+            <div class="container-fluid">
+                <div class="jumbotron">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <img class="rounded-circle center-block" src="{% static 'dgisolfi/assets/images/daniel.jpg' %}" style="height: 200px;">
+                        </div>
+                        <div class="col-md-8">
+                            <h1>Daniel<span class="text-info"> Gisolfi</span></h1>
+                            <p style="padding: 10px; padding-bottom: 4px;">
+                                Welcome to my website! I am a researcher for the IBM / Marist Joint Study and I am
+                                an avid developer during my free time. With my spare time I develop bots, websites, and other fun programming
+                                projects in order to expand my skill set. I am currently in my third year
+                                at Marist College as a Computer Science major. At the IBM / Marist Joint
+                                Study, I am researching blockchain as well as high and low level interaction honeypot technologies.
+                                As a result of programing both blockchain and honeypot applications, I have acquired
+                                a large range of skills with current and upcoming technologies. All personal projects can be
+                                found and forked from <a href="/github">GitHub</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="jumbotron recent">
+                    <h1 class="display-5">Recent Projects</h1>
+                    <hr class="my-4">
+
+                    <h1 class="display-6">SMSBot</h1>
+                    <p>A minimal one-way chatbot which sends messages throughout the day via SMS here.</a></p>
+                    <p>The Source Code for this project can be found on <a class="text-info" href="https://github.com/dgisolfi/SMSBot">GitHub</a>.</p>
+                    <hr class="my-4">
+
+                    <h1 class="display-6">DOS</h1>
+                    <p>A Typescript OS created for Fall 2018 Operating Systems class. The latest release of DOS can be found running <a class="text-info" href="/DOS">here.</a></p>
+                    <p>The Source Code for this project can be found on <a class="text-info" href="https://github.com/dgisolfi/DOS">GitHub</a>.</p>
+                    <hr class="my-4">
+
+                    <h1 class="display-6">IEEE Published Paper</h1>
+                    <p><a class="text-info" href="{% static 'dgisolfi/assets/docs/HoneyNet.pdf' %}">HoneyNet Environment for Analyzing Malicious Actors</a></p>
+                    <p style="font-size:1.25rem">Researched and developed honeypots which are web applications or resources that are deceptively constructed to log actions of its users, most (but not all) of whom can be assumed to be malicious actors. They allow for vast amounts of data to be collected for analysis. In a paper, my coworkers and I wrote and discussed how we came to build a network of honeypots, from design to implementation, and a few insights gained by analyzing attack data gathered from it. We presented our research at IEEE MIT Undergraduate Research Technology Conference which will be published to the IEEE Research Directory.</p>
+                    <hr class="my-4">
+
+                    <h1 class="display-6">T-RexRun</h1>
+                    <p>A recreation of the T-Rex Run game found on Google Chrome. Written instead in PyGame. </a></p>
+                    <p>The Source Code for this project can be found on <a class="text-info" href="https://github.com/dgisolfi/T-RexRun">GitHub</a>.</p>
+                    <hr class="my-4">
+
+                    <h1 class="display-6">Chatbot API</h1>
+                    <p>Created a ChatBot API in order to send, receive, and interact with GroupMe Bots. This allows for new bots to register with the API and send to any known group chat.</p>
+                    <p>The Source Code for this project can be found on <a class="text-info" href="https://github.com/dgisolfi/ChatbotAPI">GitHub</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock body %}
+
+{% block scripts %}
+<script>
+$("#home").addClass("active");
+</script>
+{% endblock scripts %}

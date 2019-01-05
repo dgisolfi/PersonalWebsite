@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} | Projects{% endblock title %}
+
+{% comment %} loads all static files {% endcomment %}
+{% load static %}
+
+{% block body %}
+<div class="container justify-content-center" style="padding-top:10rem;">
+    <h1 class="display-4 text-center">Projects</h1>
+        <div class="row justify-content-center">
+        {% for repo in repositories %}
+            <div class="col-md-4"> 
+                <div class="card project text-white bg-dark mb-4">
+                    <div class="card-header">
+                        {{ repo.name }}
+                        <span class="float-right">
+                            {{ repo.stars }}<img class="star" src="{% static 'dgisolfi/assets/images/star.svg' %} ">
+                        </div>
+                        <div class="card-body bg-dark">
+                            <p class="card-text">{{ repo.description }} <a class="redirect" href="{{ repo.url }}">GitHub</a>.</p>
+                        </div>
+                    <div class="card-footer card-foot">
+                        {% if  repo.homepage is not defined %}
+                        <a class="redirect" href="{{ repo.homepage }}">Project Link</a>
+                        {% endif %}  
+                        <p class="float-right">{{ repo.language }}</p>
+                    </div>   
+                </div> 
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}
+
+{% block scripts %}
+<script>
+$("#projects").addClass("active");
+</script>
+{% endblock scripts %}
+
+
+
