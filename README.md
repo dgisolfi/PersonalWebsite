@@ -3,7 +3,7 @@ A Personal Webpage run with Django
 
 ### Author
 
-*Daniel Gisolfi - All current work - dgisolfi*
+**Daniel Gisolfi** - *All current work* - [dgisolfi](https://github.com/dgisolfi)
 
 ## Deployment
 

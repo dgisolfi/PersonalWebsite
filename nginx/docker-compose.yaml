@@ -1,0 +1,11 @@
+# Author:  Daniel Nicolas Gisolfi
+
+version: "2"
+services:
+  nginx:
+    image: nginx
+    ports: 
+      - "80:80"
+    container_name: reverse-proxy
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf 
