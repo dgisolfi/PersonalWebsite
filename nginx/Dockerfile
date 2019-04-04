@@ -1,0 +1,11 @@
+FROM nginx
+MAINTAINER Daniel Gisolfi
+RUN apt-get update -y \
+    && apt-get install openssl
+
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.key /etc/nginx/ssl/nginx.key
+COPY ./nginx.crt /etc/nginx/ssl/nginx.crt
+
+EXPOSE 80
+

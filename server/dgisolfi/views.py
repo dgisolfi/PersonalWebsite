@@ -70,7 +70,6 @@ class Projects(TemplateView):
                         args['homepage'] = repo['homepage']
 
                     repositories.append(args)
-
         except:
             print('Failed to get api request from %s' % url)
             
