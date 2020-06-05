@@ -22,8 +22,6 @@ const Projects = () => {
         dispatch(fetchProjects());
     } 
 
-    console.log(projects)
-
     return (
         <div>
         <h1 style={{textAlign:'center'}}>Projects</h1>

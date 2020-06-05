@@ -25,7 +25,6 @@ const middleware = store => next => action => {
     delete action.type;
   }
 
-  console.log(action)
   const { route, endpoint, method, content, types } = apiInvocationHook;
   const [ requestType, successType, failureType ] = types;
 

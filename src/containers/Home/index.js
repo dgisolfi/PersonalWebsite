@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchHomePage, doneFetchingHomePage } from '../../redux/actions/pageActions';
 
-
-
 const Home = () => {
     const dispatch = useDispatch();
     const state = useSelector(state => state);
@@ -15,12 +13,12 @@ const Home = () => {
     if (firstLoad){
         setFirstLoad(false);
         dispatch(fetchHomePage());
-    } 
-      
+    }
+    
     return (
         <div>
             <div class="bx--row" style={{justifyContent:'center'}}>
-                <div className="bx--col" style={{backgroundColor: "#f2f2f2"}}>
+                <div className="bx--col-sm-16 bx--col-md-12 bx--col-lg-8" style={{backgroundColor: "#f2f2f2"}}>
                     <div class="bx--row"  style={{justifyContent:'center', alignItems:'center', paddingTop:  '2vh'}}>
                         <div class="bx--col-lg-16"><img src={require('../../static/daniel.jpg')} alt="" style={{borderRadius: '50%', height: '275px'}} /></div>
                     </div>
@@ -43,7 +41,7 @@ const Home = () => {
                 </div>
             </div>
             <div class="bx--row" style={{justifyContent:'center',  paddingTop:"3vh"}}>
-                <div className="bx--col" style={{alignItems:'center', paddingTop:"5vh", backgroundColor: "#f2f2f2"}}>
+                <div className="bx--col-sm-16 bx--col-md-12 bx--col-lg-8" style={{alignItems:'center', paddingTop:"5vh", backgroundColor: "#f2f2f2"}}>
                     <h1 style={{textAlign:"center"}}>Recent Projects</h1>
                     <section class="bx--structured-list">
                         <div class="bx--structured-list-thead">
