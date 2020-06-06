@@ -1,17 +1,16 @@
-FROM python:3.6
+FROM node:10-slim
 MAINTAINER Daniel Gisolfi
-EXPOSE 80
-ENV DEBIAN_FRONTEND=noninteractive
+
+# Update the enviorment
 RUN apt-get update -y
-RUN apt-get install -y \
-    build-essential \
-    && pip install --upgrade pip
 
-COPY ./server /server
-WORKDIR /server
-COPY requirements.txt .
+WORKDIR /dgisolfi
+COPY ./public ./public
+COPY ./src ./src
+COPY index.js .
+COPY package.json .
 
-RUN pip3 install -r requirements.txt
-
-ENTRYPOINT [ "python3" ]
-CMD ["./manage.py", "runserver", "--insecure", "0.0.0.0:80"]
+EXPOSE 3000
+RUN npm install \
+    && npm run build
+CMD npm run serve

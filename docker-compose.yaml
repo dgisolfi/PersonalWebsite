@@ -1,0 +1,10 @@
+# Daniel Nicolas Gisolfi
+# 2020-5-29
+
+version: '2'
+services:
+  ui:
+    build: .
+    container_name: dgisolfi-site
+    ports:
+      - "8080:3000"
