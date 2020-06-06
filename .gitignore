@@ -26,5 +26,3 @@ yarn-error.log*
 .vscode
 .DS_Store
 *.pyc
-
-.env

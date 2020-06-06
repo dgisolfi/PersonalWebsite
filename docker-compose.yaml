@@ -4,10 +4,7 @@
 version: '2'
 services:
   ui:
-    build: ./ui/.
+    build: .
     container_name: dgisolfi-site
-    env_file: .env
     ports:
-      - "8080:80"
-    networks:
-      - dgisolfi-network
+      - "8080:3000"

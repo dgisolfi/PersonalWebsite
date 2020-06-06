@@ -6,7 +6,7 @@
 import 'whatwg-fetch';
 import * as ActionTypes from '../constants';
 
-const DGISOLFI_API_URL = 'http://192.168.2.106:9090/http://dgisolfi.xyz/api/';
+const DGISOLFI_API_URL = 'http://dgisolfi.xyz:9095/http://dgisolfi.xyz/api/';
 const GITHUB_API_URL = 'https://api.github.com';
 let SERVER_API_URL = DGISOLFI_API_URL;
 
