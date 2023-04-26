@@ -1,11 +1,89 @@
-body {
-  margin: 0;
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --initial: rgb(111, 141, 158);
+  --primary: #fffff;
+  --secondary: #598b77;
+  --tertiary: #4b66a8;
+  /* #e7b05ee7; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* fda929 */
+
+
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
+}
+  
+.picture {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: 40vh;
+}
+
+/* Setting fade transition and default settings */
+body {
+  /* color: #000; */
+  background-color: var(--initial);
+  transition: background-color 1s ease;
+}
+
+.header {
+  margin: 0;
+  display: grid;
+  height: 100vh;
+  display: inline-block;
+  padding: 20vh 30vw 20vh 30vw;
+  /* grid-template-columns: 30vw 70vw; */
+}
+
+.name {
+  text-align: center;
+  /* margin-top: 20vh; */
+  font-size: 15vh;
+  display:inline-block;
+}
+
+.secondary {
+  /* margin: 0; */
+  /* display: grid; */
+  /* height: 100vh; */
+  /* grid-template-columns: 40vw 60vw; */
+}
+
+.panel {
+  min-height: 100vh;
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif; */
+  /* outline: 10px solid hotpink; */
+  /* turn above on to see the edge of panels */
+}
+
+.color-initial {
+  background-color: var(--initial);
+}
+/* colours */
+.color-primary {
+  background-color: var(--primary);
+}
+.color-secondary {
+  background-color: var(--secondary);
+  /* #4B649E; */
+}
+.color-tertiary {
+  background-color: var(--tertiary);
 }

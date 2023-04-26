@@ -1,47 +1,22 @@
 {
   "name": "dgisolfi",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@carbon/icons-react": "^10.11.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "bootstrap": "^4.5.0",
-    "carbon-components": "^10.9.0",
-    "carbon-components-react": "^7.9.0",
-    "carbon-icons": "^7.0.7",
-    "express": "^4.17.1",
-    "node-sass": "^4.14.1",
-    "react": "^16.12.0",
-    "react-bootstrap": "^1.0.1",
-    "react-dom": "^16.12.0",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
-  },
+  "version": "4.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
   "scripts": {
-    "serve": "node index.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgisolfi/PersonalWebsite.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Daniel Nicolas Gisolfi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgisolfi/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/dgisolfi/PersonalWebsite#readme",
+  "dependencies": {
+    "github-markdown-css": "^4.0.0"
   }
 }
